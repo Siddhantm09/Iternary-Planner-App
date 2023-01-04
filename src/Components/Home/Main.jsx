@@ -40,13 +40,13 @@ const cards = [
     about:
       "The Maldives is famous for a number of reasons, including its vibrant culture, pristine beaches, sprawling greenery, and fascinating landmarks. Apart from the numerous enchanting landmarks, Maldives is also famous for water sports and other adventure activities",
   },
-  {
-    title: "Kalpa",
-    id: 3,
-    img: kalpa,
-    about:
-      "Kalpa is a small village in the Sutlej river valley, above Reckong Peo in the Kinnaur district of Himachal Pradesh, Northern India, in the Indian Himalaya. The region is inhabited by the Kinnauri people and is known for its apple orchards, as apples are a major cash-crop for the region",
-  },
+  // {
+  //   title: "Kalpa",
+  //   id: 3,
+  //   img: kalpa,
+  //   about:
+  //     "Kalpa is a small village in the Sutlej river valley, above Reckong Peo in the Kinnaur district of Himachal Pradesh, Northern India, in the Indian Himalaya. The region is inhabited by the Kinnauri people and is known for its apple orchards, as apples are a major cash-crop for the region",
+  // },
   {
     title: "Kanyakumari",
     id: 4,
