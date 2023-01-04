@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import kalpa from "../../assets/Kalpa.jpg";
+// import kalpa from "../../assets/Kalpa.jpg";
 import maldives from "../../assets/maldives.jpg";
 import newyork from "../../assets/statue of liberty.jpg";
 import uttarakhand from "../../assets/uttarakhand.jpeg";
