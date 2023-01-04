@@ -4,7 +4,8 @@ import Navbar from "./Components/Home/Navbar";
 import { Routes, Route } from "react-router-dom";
 import YouPlan from "./Components/Planning/YouPlan";
 import WePlan from "./Components/Planning/WePlan";
-import Subscribe from "./Components/Home/Subscribe";
+
+import SubscribeUs from "./Components/Home/SubscribeUs";
 function App() {
   return (
     <>
@@ -16,7 +17,7 @@ function App() {
             <div>
               <HeroSection />
               <Main />
-              <Subscribe />
+              <SubscribeUs />
             </div>
           }
         ></Route>

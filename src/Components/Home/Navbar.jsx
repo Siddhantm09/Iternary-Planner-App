@@ -9,6 +9,7 @@ import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import MenuIcon from "@mui/icons-material/Menu";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import { NavLink } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
@@ -36,7 +37,7 @@ function Navbar() {
 
   return (
     <section>
-      <AppBar position="sticky" sx={{ backgroundColor: "#348ce3" }}>
+      <AppBar position="sticky" sx={{ backgroundColor: "#AF9BF7" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* ======================================================================================================= */}
@@ -66,7 +67,7 @@ function Navbar() {
             {/* =============================================================================================== */}
             {/* For Small Screen*/}
 
-            {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -133,7 +134,7 @@ function Navbar() {
               }}
             >
               Travel
-            </Typography> */}
+            </Typography>
 
             {/* ============================================================================================= */}
             {/* For Large Screen */}

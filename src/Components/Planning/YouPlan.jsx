@@ -6,6 +6,7 @@ import "../../index.css";
 import { useState } from "react";
 import YouPlanMain from "./YouPlanMain";
 import map from "../../Assets/YouPlanVector.svg";
+import Typewriter from "typewriter-effect";
 
 const YouPlan = () => {
   const [counter, setCounter] = useState(0);
@@ -36,7 +37,11 @@ const YouPlan = () => {
                 marginLeft: { lg: 5, xs: 0, sm: 2 },
               }}
             >
-              Plan Your Trip!
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString("Plan your trip!").start();
+                }}
+              />
             </Typography>
           </Grid>
           <Grid item lg={6} sm={6} xs={12}>

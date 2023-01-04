@@ -7,6 +7,7 @@ import WePlanMain from "./WePlanMain";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import vector from "../../Assets/WePlanVector.svg";
+import Typewriter from "typewriter-effect";
 const WePlan = () => {
   const [value, setValue] = useState(0);
   const AddTextFieldok = () => {
@@ -34,7 +35,11 @@ const WePlan = () => {
                 marginLeft: { lg: 5, xs: 0, sm: 2 },
               }}
             >
-              We Plan for you!
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString("We plan for you !").start();
+                }}
+              />
             </Typography>
           </Grid>
           <Grid item lg={6} sm={6} xs={12}>

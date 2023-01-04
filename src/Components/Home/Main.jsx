@@ -12,7 +12,7 @@ import {
   IconButton,
   Toolbar,
 } from "@mui/material";
-
+import Typewriter from "typewriter-effect";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Kalpa from "../../Assets/kalpa.jpg";
 import maldives from "../../Assets/maldives.jpg";
@@ -93,9 +93,13 @@ const cards = [
 export default function Main() {
   return (
     <>
-      <Container>
-        <Typography variant="h3" mt="60px" mb="15px">
-          Preplanned trips for you !
+      <Container maxWidth="lg">
+        <Typography sx={{ color: "#6c64fc" }} variant="h4" mt="60px" mb="15px">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString("Preplanned trips for you !").start();
+            }}
+          />
         </Typography>
         <Grid container spacing={4}>
           {cards.map((card) => (
@@ -108,7 +112,7 @@ export default function Main() {
               key={card.id}
               sx={{ mt: "10px" }}
             >
-              <Card sx={{ border: 1 }}>
+              <Card sx={{ borderColor: "#ba68c8" }}>
                 <CardMedia
                   component="img"
                   height="200"
@@ -133,8 +137,12 @@ export default function Main() {
                           display: { xs: "flex", md: "flex" },
                         }}
                       >
-                        <Button size="small">Share</Button>
-                        <Button size="small">Plans</Button>
+                        <Button sx={{ color: "#6c64fc" }} size="small">
+                          Share
+                        </Button>
+                        <Button sx={{ color: "#6c64fc" }} size="small">
+                          Plans
+                        </Button>
                       </Box>
 
                       <Box sx={{ flexGrow: 0 }}>
