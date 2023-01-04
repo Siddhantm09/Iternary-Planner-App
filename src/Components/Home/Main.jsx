@@ -14,11 +14,11 @@ import {
 } from "@mui/material";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import Kalpa from "../../Assets/Kalpa.jpg";
-import maldives from "../../Assets/maldives.jpg";
-import newyork from "../../Assets/statue of liberty.jpg";
-import uttarakhand from "../../Assets/uttarakhand.jpeg";
-import kanyakumari from "../../Assets/kanyakumari.jpg";
+import kalpa from "../../assets/Kalpa.jpg";
+import maldives from "../../assets/maldives.jpg";
+import newyork from "../../assets/statue of liberty.jpg";
+import uttarakhand from "../../assets/uttarakhand.jpeg";
+import kanyakumari from "../../assets/kanyakumari.jpg";
 import panchgani from "../../Assets/Panchgani.jpg";
 import ranthambore from "../../Assets/ranthambore.jpg";
 import goa from "../../Assets/goa.jpg";
@@ -43,7 +43,7 @@ const cards = [
   {
     title: "Kalpa",
     id: 3,
-    img: Kalpa,
+    img: kalpa,
     about:
       "Kalpa is a small village in the Sutlej river valley, above Reckong Peo in the Kinnaur district of Himachal Pradesh, Northern India, in the Indian Himalaya. The region is inhabited by the Kinnauri people and is known for its apple orchards, as apples are a major cash-crop for the region",
   },
