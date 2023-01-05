@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="hero">
-        <video src={video} muted autoPlay loop type="video/mp4" />
+        //<video src={video} muted autoPlay loop type="video/mp4" />
       </div>
     </>
   );
