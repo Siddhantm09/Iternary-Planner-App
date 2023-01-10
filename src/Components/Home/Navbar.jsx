@@ -1,19 +1,20 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import MenuIcon from "@mui/icons-material/Menu";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
+import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
-import Tooltip from "@mui/material/Tooltip";
-import Avatar from "@mui/material/Avatar";
+import {
+  Container,
+  Menu,
+  Button,
+  MenuItem,
+  Tooltip,
+  Typography,
+  IconButton,
+  AppBar,
+  Box,
+  Toolbar,
+} from "@mui/material";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,7 +38,10 @@ function Navbar() {
 
   return (
     <section>
-      <AppBar position="sticky" sx={{ backgroundColor: "#AF9BF7" }}>
+      <AppBar
+        position="sticky"
+        sx={{ bgcolor: "secondary.main", fontFamily: "cursive" }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* ======================================================================================================= */}

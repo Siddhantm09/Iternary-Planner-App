@@ -3,16 +3,19 @@ import { Container } from "@mui/system";
 import { Button, TextField, Typography, Box, Grid } from "@mui/material";
 import subscribe from "../../Assets/subscribe.svg";
 import Typewriter from "typewriter-effect";
+
 const SubscribeUs = () => {
   return (
     <div>
       <Container maxWidth="md" sx={{ my: 5 }}>
-        <Typography sx={{ color: "#6c64fc" }} variant="overline">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString("Subscribe for more plans!").start();
-            }}
-          />
+        <Typography
+          sx={{
+            color: "secondary.main",
+            fontFamily: "cursive",
+            fontSize: "30px",
+          }}
+        >
+          Subscribe for more plans!
         </Typography>
         <Container maxWidth="md" sx={{ my: 5, mb: 10 }}>
           <Grid container spacing={5}>
@@ -62,6 +65,7 @@ const SubscribeUs = () => {
                   variant="filled"
                   sx={{ m: 1, width: "32ch" }}
                 ></TextField>
+
                 <TextField
                   id="filled-textarea"
                   label="Enter your Contact"
@@ -70,6 +74,7 @@ const SubscribeUs = () => {
                   variant="filled"
                   sx={{ m: 1, width: "32ch" }}
                 ></TextField>
+
                 <Button
                   variant="outlined"
                   size="medium"

@@ -94,12 +94,17 @@ export default function Main() {
   return (
     <>
       <Container maxWidth="lg">
-        <Typography sx={{ color: "#6c64fc" }} variant="h4" mt="60px" mb="15px">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString("Preplanned trips for you !").start();
-            }}
-          />
+        <Typography
+          sx={{
+            color: "secondary.main",
+            fontFamily: "cursive",
+            fontSize: "30px",
+          }}
+          variant="h6"
+          mt="60px"
+          mb="15px"
+        >
+          Preplanned trips for you !
         </Typography>
         <Grid container spacing={4}>
           {cards.map((card) => (
