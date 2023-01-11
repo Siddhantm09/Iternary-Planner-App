@@ -7,15 +7,16 @@ import Typewriter from "typewriter-effect";
 const SubscribeUs = () => {
   return (
     <div>
-      <Container maxWidth="md" sx={{ my: 5 }}>
+      <Container maxWidth="lg" sx={{ my: 5 }}>
         <Typography
+          //textAlign="center"
           sx={{
             color: "secondary.main",
             fontFamily: "cursive",
             fontSize: "30px",
           }}
         >
-          Subscribe for more plans!
+          Subscribe for plan updates
         </Typography>
         <Container maxWidth="md" sx={{ my: 5, mb: 10 }}>
           <Grid container spacing={5}>
