@@ -44,7 +44,7 @@ function App() {
             <div>
               <HeroSection />
               <Main />
-              <SubscribeUs />
+              <SubscribeUs/>
             </div>
           }
         ></Route>
