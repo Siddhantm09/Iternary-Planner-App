@@ -8,6 +8,8 @@ import SubscribeUs from "./Components/Home/SubscribeUs";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material";
 import Footer from "./Components/Home/Footer";
+import News from "./Components/Home/News";
+import About from "./Components/Home/About";
 
 const theme = createTheme({
   palette: {
@@ -48,6 +50,8 @@ function App() {
         ></Route>
         <Route path="/youplan" element={<YouPlan />}></Route>
         <Route path="/weplan" element={<WePlan />}></Route>
+        <Route path="/news" element={<News />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
       <Footer />
     </ThemeProvider>

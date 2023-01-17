@@ -117,9 +117,17 @@ function Navbar() {
                   <Typography textAlign="center">Subscribe</Typography>
                 </MenuItem>
 
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">News</Typography>
-                </MenuItem>
+                <NavLink to="/news" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">News</Typography>
+                  </MenuItem>
+                </NavLink>
+
+                <NavLink to="/about" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">About</Typography>
+                  </MenuItem>
+                </NavLink>
               </Menu>
             </Box>
             <ConnectingAirportsIcon
@@ -171,18 +179,22 @@ function Navbar() {
               >
                 Subscribe
               </Button>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                News
-              </Button>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                About
-              </Button>
+              <NavLink to="/news" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  News
+                </Button>
+              </NavLink>
+              <NavLink to="/about" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  About
+                </Button>
+              </NavLink>
             </Box>
 
             {/* ======================================================================================================== */}

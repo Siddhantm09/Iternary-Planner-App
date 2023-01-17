@@ -11,6 +11,7 @@ import {
   Tooltip,
   IconButton,
   Toolbar,
+  Link,
 } from "@mui/material";
 import Typewriter from "typewriter-effect";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
@@ -25,6 +26,8 @@ import goa from "../../Assets/goa.jpg";
 import kerala from "../../Assets/kerala.jpg";
 import { Container } from "@mui/system";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ShareIcon from "@mui/icons-material/Share";
+import { NavLink } from "react-router-dom";
 
 const cards = [
   {
@@ -34,6 +37,7 @@ const cards = [
     img: newyork,
     about:
       "This city is often thought to be the center of the world. New York, the most populous city in the United States (US), is the capital of culture, finance, media and international diplomacy. Its five counties – Brooklyn, Queens, Manhattan, The Bronx and Staten Island are all famous in their own special ways",
+    link: "https://traveltriangle.com/blog/maldives-travel-tips/",
   },
   {
     title: "Maldives",
@@ -42,6 +46,7 @@ const cards = [
     img: maldives,
     about:
       "The Maldives is famous for a number of reasons, including its vibrant culture, pristine beaches, sprawling greenery, and fascinating landmarks. Apart from the numerous enchanting landmarks, Maldives is also famous for water sports and other adventure activities",
+    link: "https://traveltriangle.com/blog/maldives-travel-tips/",
   },
   {
     title: "Kalpa",
@@ -161,18 +166,29 @@ export default function Main() {
                           display: { xs: "flex", md: "flex" },
                         }}
                       >
-                        <Button sx={{ color: "#6c64fc" }} size="small">
-                          Share
-                        </Button>
-                        <Button sx={{ color: "#6c64fc" }} size="small">
-                          Plans
+                        <Button
+                          sx={{ color: "#6c64fc", textDecoration: "none" }}
+                          size="small"
+                        >
+                          <Link underline="hover" href="{cards.link}">
+                            Travel Tips
+                          </Link>
                         </Button>
                       </Box>
 
                       <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Like">
                           <IconButton>
-                            <ThumbUpIcon />
+                            <ThumbUpIcon
+                              sx={{
+                                mx: 1,
+                              }}
+                            />
+                          </IconButton>
+                        </Tooltip>
+                        <Tooltip title="Share">
+                          <IconButton>
+                            <ShareIcon />
                           </IconButton>
                         </Tooltip>
                       </Box>
