@@ -116,6 +116,10 @@ function Navbar() {
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Subscribe</Typography>
                 </MenuItem>
+
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">News</Typography>
+                </MenuItem>
               </Menu>
             </Box>
             <ConnectingAirportsIcon
@@ -149,7 +153,7 @@ function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  Plan Yourself!
+                  Plan Yourself
                 </Button>
               </NavLink>
               <NavLink to="/weplan" style={{ textDecoration: "none" }}>
@@ -157,7 +161,7 @@ function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  We Plan!
+                  We Plan
                 </Button>
               </NavLink>
 
@@ -165,7 +169,19 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                Subscribe!
+                Subscribe
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                News
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                About
               </Button>
             </Box>
 

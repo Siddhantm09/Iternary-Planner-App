@@ -24,10 +24,12 @@ import ranthambore from "../../Assets/ranthambore.jpg";
 import goa from "../../Assets/goa.jpg";
 import kerala from "../../Assets/kerala.jpg";
 import { Container } from "@mui/system";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const cards = [
   {
     title: "NewYork",
+    country: "USA",
     id: 1,
     img: newyork,
     about:
@@ -35,6 +37,7 @@ const cards = [
   },
   {
     title: "Maldives",
+    country: "India",
     id: 2,
     img: maldives,
     about:
@@ -42,6 +45,7 @@ const cards = [
   },
   {
     title: "Kalpa",
+    country: "India",
     id: 3,
     img: Kalpa,
     about:
@@ -49,6 +53,7 @@ const cards = [
   },
   {
     title: "Kanyakumari",
+    country: "India",
     id: 4,
     img: kanyakumari,
     about:
@@ -56,6 +61,7 @@ const cards = [
   },
   {
     title: "Kerala",
+    country: "India",
     id: 5,
     img: kerala,
     about:
@@ -63,6 +69,7 @@ const cards = [
   },
   {
     title: "Uttarakhand",
+    country: "India",
     id: 6,
     img: uttarakhand,
     about:
@@ -70,6 +77,7 @@ const cards = [
   },
   {
     title: "Panchgani",
+    country: "India",
     id: 7,
     img: panchgani,
     about:
@@ -77,6 +85,7 @@ const cards = [
   },
   {
     title: "Ranthambore National Park",
+    country: "India",
     id: 8,
     img: ranthambore,
     about:
@@ -84,6 +93,7 @@ const cards = [
   },
   {
     title: "Goa",
+    country: "India",
     id: 9,
     img: goa,
     about:
@@ -104,7 +114,7 @@ export default function Main() {
           mt="60px"
           mb="15px"
         >
-          Preplanned trips for you !
+          Most visited destinations
         </Typography>
         <Grid container spacing={4}>
           {cards.map((card) => (
@@ -125,9 +135,18 @@ export default function Main() {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    sx={{ mb: 0 }}
+                  >
                     {card.title}
                   </Typography>
+                  <Box sx={{ display: "flex", mb: 1 }}>
+                    <LocationOnIcon />
+                    <Typography>{card.country}</Typography>
+                  </Box>
                   <Typography variant="body2" color="text.secondary">
                     {card.about}
                   </Typography>
