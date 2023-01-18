@@ -18,14 +18,14 @@ const Footer = () => {
             </Container>
           </Paper>
         </section>
-        <video
+        {/* <video
           className="video"
           src={footervideo}
           muted
           autoPlay
           loop
           type="video/mp4"
-        />
+        /> */}
       </div>
     </>
   );
