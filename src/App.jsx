@@ -26,7 +26,7 @@ const theme = createTheme({
       '"Helvetica Neue"',
       "cursive",
       "sans-serif",
-      '"Apple Color Emoji"',
+      "Apple Color Emoji",
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
@@ -44,7 +44,7 @@ function App() {
             <div>
               <HeroSection />
               <Main />
-              <SubscribeUs/>
+              <SubscribeUs />
             </div>
           }
         ></Route>
