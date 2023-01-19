@@ -1,5 +1,8 @@
 import { Container } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+//import "../../Css/Slider.css";
+// import BtnSlider from "";
+// import KanyakumariData from ".../SliderData/KanyakumariSlider";
 
 const Kanyakumari = () => {
   const kanyakumariHotelDetails = {
@@ -9,25 +12,8 @@ const Kanyakumari = () => {
   const kanyakumariTravelTips = {
     img: [],
     tips: [],
-    // img2: "",
-    // two: "",
-    // img3: "",
-    // three: "",
-    // img4: "",
-    // four: "",
-    // img5: "",
-    // five: "",
-    // img6: "",
-    // six: "",
-    // img7: "",
-    // seven: "",
-    // img8: "",
-    // eight: "",
-    // img9: "",
-    // nine: "",
   };
-  return;
-  <Container maxWidth="xl"></Container>;
+  return <Container maxWidth="xl"></Container>;
 };
 
 export default Kanyakumari;

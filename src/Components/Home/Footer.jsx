@@ -1,7 +1,7 @@
 import { Box, Container, Paper, Toolbar, Typography } from "@mui/material";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import React from "react";
-import footervideo from "../../Assets/Aerial Shot Of Forest Covered In Snow.mp4";
+import footervideo from "../../Assets/footer.mp4";
 //import "../../footer.css";
 
 const Footer = () => {
