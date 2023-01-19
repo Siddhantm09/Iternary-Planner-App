@@ -3,28 +3,28 @@ import React from "react";
 
 const Kanyakumari = () => {
   const kanyakumariHotelDetails = {
-    name: "",
-    location: "",
+    hotelName: [],
+    hotelLocation: [],
   };
   const kanyakumariTravelTips = {
-    imgOne: "",
-    one: "",
-    imgOne: "",
-    two: "",
-    imgOne: "",
-    three: "",
-    imgOne: "",
-    four: "",
-    imgOne: "",
-    five: "",
-    imgOne: "",
-    six: "",
-    imgOne: "",
-    seven: "",
-    imgOne: "",
-    eight: "",
-    imgOne: "",
-    nine: "",
+    img: [],
+    tips: [],
+    // img2: "",
+    // two: "",
+    // img3: "",
+    // three: "",
+    // img4: "",
+    // four: "",
+    // img5: "",
+    // five: "",
+    // img6: "",
+    // six: "",
+    // img7: "",
+    // seven: "",
+    // img8: "",
+    // eight: "",
+    // img9: "",
+    // nine: "",
   };
   return;
   <Container maxWidth="xl"></Container>;

@@ -183,7 +183,7 @@ export default function Main() {
                                 textDecoration: "none",
                               }}
                             >
-                              Info and Tips
+                              Details
                             </Typography>
                           </NavLink>
                         </Button>
