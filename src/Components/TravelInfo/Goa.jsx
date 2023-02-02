@@ -9,7 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 // import img6 from "../../Assets/SliderImages/goaSlider/img6.jpeg";
 // import img7 from "../../Assets/SliderImages/goaSlider/img7.jpeg";
 
-import "../../css/slide.css";
+// import "../../css/slide.css";
 
 const Goa = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/kerala.css";
+//import "../../css/kerala.css";
 import img1 from "../../Assets/SliderImages/KeralaSlider/img1.jpg";
 import img2 from "../../Assets/SliderImages/KeralaSlider/img2.jpg";
 import img3 from "../../Assets/SliderImages/KeralaSlider/img3.jpg";
