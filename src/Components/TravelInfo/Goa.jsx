@@ -1,32 +1,36 @@
-import React, { useState } from "react";
-import "../../Css/Slider.css";
-import BtnSlider from "../../BtnSlider";
-import GoaData from "../../SliderData/GoaSlider";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+//import img1 from "../../Assets/SliderImages/goaSlider/img1.jpg";
+import img2 from "../../Assets/SliderImages/goaSlider/img2.jpg";
+import img3 from "../../Assets/SliderImages/goaSlider/img3.jpg";
+import img4 from "../../Assets/SliderImages/goaSlider/img4.jpg";
+import img5 from "../../Assets/SliderImages/goaSlider/img5.jpg";
+import img6 from "../../Assets/SliderImages/goaSlider/img6.jpeg";
+import img7 from "../../Assets/SliderImages/goaSlider/img7.jpeg";
+
+import "../../css/slide.css";
 
 const Goa = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-  const nextSlide = () => {
-    if (slideIndex !== GoaData.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === GoaData.length) {
-      setSlideIndex(1);
-    }
-  };
-  const prevSlide = () => {};
   return (
-    <div className="container-slider">
-      {GoaData.map((obj, index) => {
-        return (
-          <div
-            key={obj.id}
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-          >
-            <img src={obj.image} />
-          </div>
-        );
-      })}
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+    <div>
+      <Carousel infiniteLoop autoPlay>
+        <div className="image">
+          <img src={img2} alt="" />
+        </div>
+        <div className="image">
+          <img src={img2} alt="" />
+        </div>
+        <div className="image">
+          <img src={img3} alt="" />
+        </div>
+        <div className="image">
+          <img src={img4} alt="" />
+        </div>
+        <div className="image">
+          <img src={img5} alt="" />
+        </div>
+      </Carousel>
     </div>
   );
 };
