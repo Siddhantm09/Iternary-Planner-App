@@ -3,7 +3,7 @@ import img2 from "../Assets/SliderImages/goaSlider/img2.jpg";
 import img3 from "../Assets/SliderImages/goaSlider/img3.jpg";
 import img4 from "../Assets/SliderImages/goaSlider/img4.jpg";
 
-const GoaData = [
+const GoaHotelsData = [
   {
     id: 1,
     title: "Lorem ipsum",
@@ -29,4 +29,4 @@ const GoaData = [
     image: img4,
   },
 ];
-export default GoaData;
+export default GoaHotelsData;

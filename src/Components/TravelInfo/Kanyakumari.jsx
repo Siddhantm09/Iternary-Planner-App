@@ -3,45 +3,81 @@ import React, { useState } from "react";
 import img1 from "../../Assets/SliderImages/KanyakumariSlider/img1.jpg";
 import img2 from "../../Assets/SliderImages/KanyakumariSlider/img2.jpg";
 import img3 from "../../Assets/SliderImages/KanyakumariSlider/img3.jpg";
+import img4 from "../../Assets/SliderImages/KanyakumariSlider/img4.jpg";
+import img5 from "../../Assets/SliderImages/goaSlider/img3.jpg";
+import "../../css/kanyakumari.css";
 
 const Kanyakumari = () => {
   return (
     <div
-      id="carouselExampleAutoplaying"
+      id="carouselBasicExample"
       class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
+      data-mdb-ride="carousel"
     >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img
-            src={img1}
-            class="d-block w-100 "
-            alt="..."
-            //style={{ height: "75vh" }}
-          />
+          <img src={img5} class="d-block w-100" alt="Sunset Over the City" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
         </div>
+
         <div class="carousel-item">
           <img
-            src={img2}
+            src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp"
             class="d-block w-100"
-            alt="..."
-            // style={{ height: "75vh" }}
+            alt="Canyon at Nigh"
           />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
         </div>
+
         <div class="carousel-item">
           <img
-            src={img3}
-            class="d-block w-100 "
-            alt="..."
-            // style={{ height: "75vh" }}
+            src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+            class="d-block w-100"
+            alt="Cliff Above a Stormy Sea"
           />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </div>
         </div>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
+        data-mdb-target="#carouselBasicExample"
+        data-mdb-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -49,8 +85,8 @@ const Kanyakumari = () => {
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
+        data-mdb-target="#carouselBasicExample"
+        data-mdb-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
