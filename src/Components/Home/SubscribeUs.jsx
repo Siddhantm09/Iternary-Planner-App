@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@mui/system";
-import { Button, TextField, Typography, Box, Grid } from "@mui/material";
+import {
+  Button,
+  TextField,
+  Typography,
+  Box,
+  Grid,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from "@mui/material";
 import subscribe from "../../Assets/otherImages/subscribe.svg";
-import Typewriter from "typewriter-effect";
+import popImg from "../../assets/otherImages/thannkyou.svg";
 
 const SubscribeUs = () => {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <div>
       <Container maxWidth="lg" sx={{ my: 5 }}>
@@ -77,6 +96,7 @@ const SubscribeUs = () => {
                 ></TextField>
 
                 <Button
+                  onClick={handleOpen}
                   variant="outlined"
                   size="medium"
                   sx={{
@@ -98,6 +118,46 @@ const SubscribeUs = () => {
             </Grid>
           </Grid>
         </Container>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle textAlign={"center"} id="alert-dialog-description">
+            {"Thank you for subscribing!"}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText align="center" id="alert-dialog-description">
+              We will nofify you soon for more plan updates
+            </DialogContentText>
+            <Box
+              display="flex"
+              flexDirection={"column"}
+              alignItems="center"
+              justifyContent={"center"}
+              margin="auto"
+              marginTop={2}
+              padding={3}
+              borderRadius={5}
+            >
+              <img
+                src={popImg}
+                alt="/"
+                loading="lazy"
+                style={{
+                  maxWidth: "70%",
+                  height: "auto",
+                  padding: 0,
+                  margin: 0,
+                }}
+              />
+            </Box>
+          </DialogContent>
+          <DialogActions justifyContent="center">
+            <Button onClick={handleClose}>Close</Button>
+          </DialogActions>
+        </Dialog>
       </Container>
     </div>
   );

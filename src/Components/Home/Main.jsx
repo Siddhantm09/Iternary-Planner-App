@@ -13,11 +13,11 @@ import {
   Toolbar,
   Link,
 } from "@mui/material";
-import Typewriter from "typewriter-effect";
+
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Kalpa from "../../Assets/otherImages/kalpa.jpg";
 import maldives from "../../Assets/otherImages/maldives.jpg";
-import newyork from "../../Assets/otherImages/statue of liberty.jpg";
+import newyork from "../../Assets/otherImages/statueofLiberty.jpg";
 import uttarakhand from "../../Assets/otherImages/uttarakhand.jpeg";
 import kanyakumari from "../../Assets/otherImages/kanyakumari.jpg";
 import panchgani from "../../Assets/otherImages/Panchgani.jpg";

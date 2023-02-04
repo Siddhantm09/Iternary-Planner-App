@@ -1,4 +1,5 @@
 import React from "react";
+import { KanyakumariImages } from "../../placesData/KanyakumariData";
 
 const Kanyakumari = () => {
   return (
@@ -9,18 +10,15 @@ const Kanyakumari = () => {
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src={kanya1} class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src={kanya2} class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src={kanya3} class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src={kanya4} class="d-block w-100" alt="..." />
-          </div>
+          {KanyakumariImages.map((data, index) => (
+            <div
+              key={index}
+              class="carousel-item active"
+              data-bs-interval="8000"
+            >
+              <img key={index} src={data} class="d-block w-100" alt="..." />
+            </div>
+          ))}
         </div>
         <button
           class="carousel-control-prev"
