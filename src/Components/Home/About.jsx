@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import vector from "../../Assets/undraw_about_me_re_82bv.svg";
+import vector from "../../Assets/otherImages/undraw_about_me_re_82bv.svg";
 
 const About = () => {
   return (

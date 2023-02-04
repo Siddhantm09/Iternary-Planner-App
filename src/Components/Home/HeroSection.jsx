@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../Assets/navbar.mp4";
+import video from "../../Assets/videos/navbar.mp4";
 import "../../Css/heroSection.css";
 
 const HeroSection = () => {

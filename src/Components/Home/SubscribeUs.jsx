@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "@mui/system";
 import { Button, TextField, Typography, Box, Grid } from "@mui/material";
-import subscribe from "../../Assets/subscribe.svg";
+import subscribe from "../../Assets/otherImages/subscribe.svg";
 import Typewriter from "typewriter-effect";
 
 const SubscribeUs = () => {

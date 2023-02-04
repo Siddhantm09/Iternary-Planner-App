@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-// import "../../Css/Slider.css";
-// import BtnSlider from "";
-// import NewyorkData from ".../SliderData/NewyorkSlider";
+import React from "react";
 
 const NewYork = () => {
   return <div></div>;
