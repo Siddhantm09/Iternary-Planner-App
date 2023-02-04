@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "@mui/system";
 import {
   Button,
@@ -12,8 +12,8 @@ import {
   DialogContentText,
   DialogActions,
 } from "@mui/material";
-import subscribe from "../../Assets/otherImages/subscribe.svg";
-import popImg from "../../assets/otherImages/thannkyou.svg";
+import subscribe from "../../assets/otherImages/subscribe.svg";
+import popImg from "../../assets/otherImages/thankyou.svg";
 
 const SubscribeUs = () => {
   const [open, setOpen] = useState(false);
