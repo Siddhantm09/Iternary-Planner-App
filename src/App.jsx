@@ -1,4 +1,4 @@
-import HeroSection from "./Components/home/HeroSection";
+import HeroSection from "./components/home//HeroSection";
 import Main from "./components/home/Main";
 import Navbar from "./components/home/Navbar";
 import { Routes, Route } from "react-router-dom";
