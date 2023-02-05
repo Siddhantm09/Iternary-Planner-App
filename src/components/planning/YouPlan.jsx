@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import "../../index.css";
 import { useState } from "react";
 import YouPlanMain from "./YouPlanMain";
-import map from "../../Assets/otherImages/YouPlanVector.svg";
+import map from "../../assets/otherImages/YouPlanVector.svg";
 import Typewriter from "typewriter-effect";
 
 const YouPlan = () => {
