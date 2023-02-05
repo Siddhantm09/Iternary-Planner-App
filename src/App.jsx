@@ -1,24 +1,24 @@
-import HeroSection from "./Components/Home/HeroSection";
-import Main from "./Components/Home/Main";
-import Navbar from "./Components/Home/Navbar";
+import HeroSection from "./components/Home/HeroSection";
+import Main from "./components/Home/Main";
+import Navbar from "./components/Home/Navbar";
 import { Routes, Route } from "react-router-dom";
-import YouPlan from "./Components/Planning/YouPlan";
-import WePlan from "./Components/Planning/WePlan";
-import SubscribeUs from "./Components/Home/SubscribeUs";
+import YouPlan from "./components/planning/YouPlan";
+import WePlan from "./components/planning/WePlan";
+import SubscribeUs from "./components/home/SubscribeUs";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material";
-import Footer from "./Components/Home/Footer";
-import News from "./Components/Home/News";
-import About from "./Components/Home/About";
-import Goa from "./Components/TravelInfo/Goa";
-import Kerala from "./Components/TravelInfo/Kerala";
-import NewYork from "./Components/TravelInfo/NewYork";
-import Panchgani from "./Components/TravelInfo/Panchgani";
-import Uttarakhand from "./Components/TravelInfo/Uttarakhand";
-import Maldives from "./Components/TravelInfo/Maldives";
-import RanthamboreNationalPark from "./Components/TravelInfo/RanthamboreNationalPark";
-import Kalpa from "./Components/TravelInfo/Kalpa";
-import Kanyakumari from "./Components/TravelInfo/Kanyakumari";
+import Footer from "./components/home/Footer";
+import News from "./components/home/News";
+import About from "./components/home/About";
+import Goa from "./components/travelInfo/Goa";
+import Kerala from "./components/travelInfo/Kerala";
+import NewYork from "./components/travelInfo/NewYork";
+import Panchgani from "./components/travelInfo/Panchgani";
+import Uttarakhand from "./components/travelInfo/Uttarakhand";
+import Maldives from "./components/travelInfo/Maldives";
+import RanthamboreNationalPark from "./components/TravelInfo/RanthamboreNationalPark";
+import Kalpa from "./components/travelInfo/Kalpa";
+import Kanyakumari from "./components/travelInfo/Kanyakumari";
 
 const theme = createTheme({
   palette: {

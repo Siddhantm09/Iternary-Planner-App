@@ -1,6 +1,5 @@
 import React from "react";
 import { GoaImages } from "../../placesData/goaData";
-
 const Goa = () => {
   return (
     <div>
