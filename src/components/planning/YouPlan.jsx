@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import "../../index.css";
 import { useState } from "react";
 import YouPlanMain from "./YouPlanMain";
-import map from "../../assets/otherImages/YouPlanVector";
+import image from "../../assets/otherImages/YouPlanVector.svg";
 import Typewriter from "typewriter-effect";
 
 const YouPlan = () => {
@@ -45,7 +45,7 @@ const YouPlan = () => {
           </Grid>
           <Grid item lg={6} sm={6} xs={12}>
             <img
-              src={map}
+              src={image}
               alt="/"
               style={{
                 maxWidth: "100%",
