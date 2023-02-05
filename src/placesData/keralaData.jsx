@@ -1,7 +1,7 @@
-import kerala1 from "../assets/sliderImages/KeralaSlider/kerala1.jpg";
-import kerala2 from "../assets/sliderImages/KeralaSlider/kerala2.jpg";
-import kerala3 from "../assets/sliderImages/KeralaSlider/kerala3.png";
-import kerala4 from "../assets/sliderImages/KeralaSlider/kerala4.png";
+import kerala1 from "../Assets/SliderImages/KeralaSlider/kerala1.jpg";
+import kerala2 from "../Assets/SliderImages/KeralaSlider/kerala2.jpg";
+import kerala3 from "../Assets/SliderImages/KeralaSlider/kerala3.png";
+import kerala4 from "../Assets/SliderImages/KeralaSlider/kerala4.png";
 
 export const KeralaImages = [kerala1, kerala2, kerala3, kerala4];
 export const HotelsData = [
