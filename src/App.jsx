@@ -1,6 +1,6 @@
-import HeroSection from "./Components/Home/HeroSection";
-import Main from "./components/Home/Main";
-import Navbar from "./components/Home/Navbar";
+import HeroSection from "./components/home/HeroSection";
+import Main from "./components/home/Main";
+import Navbar from "./components/home/Navbar";
 import { Routes, Route } from "react-router-dom";
 import YouPlan from "./components/planning/YouPlan";
 import WePlan from "./components/planning/WePlan";
@@ -16,7 +16,7 @@ import NewYork from "./components/travelInfo/NewYork";
 import Panchgani from "./components/travelInfo/Panchgani";
 import Uttarakhand from "./components/travelInfo/Uttarakhand";
 import Maldives from "./components/travelInfo/Maldives";
-import RanthamboreNationalPark from "./components/TravelInfo/RanthamboreNationalPark";
+import RanthamboreNationalPark from "./components/travelInfo/RanthamboreNationalPark";
 import Kalpa from "./components/travelInfo/Kalpa";
 import Kanyakumari from "./components/travelInfo/Kanyakumari";
 
