@@ -6,7 +6,7 @@ import { useState } from "react";
 import WePlanMain from "./WePlanMain";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import vector from "../../Assets/otherImages/WePlanVector.svg";
+import vector from "../../assets/otherImages/WePlanVector.svg";
 import Typewriter from "typewriter-effect";
 const WePlan = () => {
   const [value, setValue] = useState(0);
