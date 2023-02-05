@@ -1,5 +1,5 @@
 import React from "react";
-import { KanyakumariImages } from "../../placesData/KanyakumariData";
+import { KanyakumariImages } from "../../placesData/kanyakumariData";
 
 const Kanyakumari = () => {
   return (

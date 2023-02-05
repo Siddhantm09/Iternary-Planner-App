@@ -1,5 +1,5 @@
 import React from "react";
-import { RanthamboreImages } from "../../placesData/RanthamboreData";
+import { RanthamboreImages } from "../../placesData/ranthamboreData";
 
 const RanthamboreNationalPark = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { KalpaImages } from "../../placesData/KalpaData";
+import { KalpaImages } from "../../placesData/kalpaData";
 const Kalpa = () => {
   return (
     <div>

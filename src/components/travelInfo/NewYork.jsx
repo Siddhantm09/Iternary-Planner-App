@@ -1,5 +1,5 @@
 import React from "react";
-import { NewyorkImages } from "../../placesData/NewyorkData";
+import { NewyorkImages } from "../../placesData/newyorkData";
 
 const NewYork = () => {
   return (

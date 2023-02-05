@@ -1,5 +1,5 @@
 import React from "react";
-import { MaldivesImages } from "../../placesData/MaldivesData";
+import { MaldivesImages } from "../../placesData/maldivesData";
 const Maldives = () => {
   return (
     <div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PanchganiImages } from "../../placesData/PanchganiData";
+import { PanchganiImages } from "../../placesData/panchganiData";
 const Panchgani = () => {
   return (
     <div>
