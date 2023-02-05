@@ -32,13 +32,13 @@ const About = () => {
           </Grid>
           <Grid item>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              quis dui hendrerit, tempus enim vitae, faucibus diam. Duis sit
-              amet sagittis lorem. Curabitur feugiat risus urna. Curabitur sit
-              amet odio euismod, aliquam tellus a, pulvinar odio. Nam accumsan
-              magna a tortor iaculis dapibus. Curabitur maximus urna a lorem
-              finibus, a aliquam tellus porttitor. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia curae; Duis eu
+              ipsum dolor sit amet, consectetur adipiscing elit. Proin quis dui
+              hendrerit, tempus enim vitae, faucibus diam. Duis sit amet
+              sagittis lorem. Curabitur feugiat risus urna. Curabitur sit amet
+              odio euismod, aliquam tellus a, pulvinar odio. Nam accumsan magna
+              a tortor iaculis dapibus. Curabitur maximus urna a lorem finibus,
+              a aliquam tellus porttitor. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Duis eu
               metus consectetur tellus tristique sagittis. Donec eget rutrum
               sapien. Nulla aliquet facilisis mi, non scelerisque quam molestie
               et. Nunc eu tortor et diam posuere aliquam eget sed est. Interdum
