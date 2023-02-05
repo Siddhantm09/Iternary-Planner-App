@@ -1,7 +1,7 @@
 import { Box, Container, Paper, Toolbar, Typography } from "@mui/material";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import React from "react";
-import footervideo from "../../Assets/videos/footer.mp4";
+import footervideo from "../../assets/videos/footer.mp4";
 //import "../../footer.css";
 
 const Footer = () => {

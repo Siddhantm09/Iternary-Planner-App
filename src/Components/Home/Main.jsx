@@ -15,15 +15,15 @@ import {
 } from "@mui/material";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import Kalpa from "../../Assets/otherImages/kalpa.jpg";
-import maldives from "../../Assets/otherImages/maldives.jpg";
-import newyork from "../../Assets/otherImages/statueofLiberty.jpg";
-import uttarakhand from "../../Assets/otherImages/uttarakhand.jpeg";
-import kanyakumari from "../../Assets/otherImages/kanyakumari.jpg";
-import panchgani from "../../Assets/otherImages/Panchgani.jpg";
-import ranthambore from "../../Assets/otherImages/ranthambore.jpg";
-import goa from "../../Assets/otherImages/goa.jpg";
-import kerala from "../../Assets/otherImages/kerala.jpg";
+import Kalpa from "../../assets/otherImages/kalpa.jpg";
+import maldives from "../../assets/otherImages/maldives.jpg";
+import newyork from "../../assets/otherImages/statueofLiberty.jpg";
+import uttarakhand from "../../assets/otherImages/uttarakhand.jpeg";
+import kanyakumari from "../../assets/otherImages/kanyakumari.jpg";
+import panchgani from "../../assets/otherImages/Panchgani.jpg";
+import ranthambore from "../../assets/otherImages/ranthambore.jpg";
+import goa from "../../assets/otherImages/goa.jpg";
+import kerala from "../../assets/otherImages/kerala.jpg";
 import { Container } from "@mui/system";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ShareIcon from "@mui/icons-material/Share";

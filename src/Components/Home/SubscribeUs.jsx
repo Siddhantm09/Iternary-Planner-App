@@ -12,8 +12,8 @@ import {
   DialogContentText,
   DialogActions,
 } from "@mui/material";
-import subscribe from "../../Assets/otherImages/subscribe.svg";
-import popImg from "../../Assets/otherImages/thankyou.svg";
+import subscribe from "../../assets/otherImages/subscribe.svg";
+import popImg from "../../assets/otherImages/thankyou.svg";
 
 const SubscribeUs = () => {
   const [open, setOpen] = useState(false);
