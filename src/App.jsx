@@ -1,5 +1,5 @@
-import HeroSection from "./components/home/HeroSection";
-import Main from "./components/home/Main";
+import HeroSection from "./Components/home/HeroSection";
+import Main from "./Components/home/Main";
 import Navbar from "./components/home/Navbar";
 import { Routes, Route } from "react-router-dom";
 import YouPlan from "./components/planning/YouPlan";
