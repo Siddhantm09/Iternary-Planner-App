@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import subscribe from "../../assets/otherImages/subscribe.svg";
 import popImg from "../../assets/otherImages/thankyou.svg";
+import submit from "../../assets/otherImages/submit.svg";
 
 const SubscribeUs = () => {
   const [open, setOpen] = useState(false);

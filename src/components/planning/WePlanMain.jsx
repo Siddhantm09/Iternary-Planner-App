@@ -1,13 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import { TextField, Typography, Button, Box } from "@mui/material";
+import {
+  TextField,
+  Typography,
+  Button,
+  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import {
   DatePicker,
   DateTimePicker,
   LocalizationProvider,
 } from "@mui/x-date-pickers";
-
+import submitImg from "../../assets/otherImages/submit.svg";
 import { Container } from "@mui/system";
 
 const WePlanMain = ({ val }) => {
@@ -17,8 +27,16 @@ const WePlanMain = ({ val }) => {
   };
   const [value, setValue] = useState(null); //date and time picker
   const [valueEnd, setValueEnd] = useState(null); //end date picker
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   return (
-    <>
+    <div>
       <Container maxWidth="xl">
         {Array.from(Array(mainValue)).map((c, index) => {
           return (
@@ -88,11 +106,62 @@ const WePlanMain = ({ val }) => {
         })}
       </Container>
       <Box align="center">
-        <Button variant="contained" color="success" sx={{ my: "20px" }}>
+        <Button
+          onClick={handleOpen}
+          variant="contained"
+          color="success"
+          sx={{ my: "20px" }}
+        >
           Submit
         </Button>
       </Box>
-    </>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle textAlign={"center"} id="alert-dialog-description">
+          {"Thanks for the submission!"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText align="center" id="alert-dialog-description">
+            Your data is safe with us!
+          </DialogContentText>
+          <Box
+            display="flex"
+            flexDirection={"column"}
+            alignItems="center"
+            justifyContent={"center"}
+            margin="auto"
+            marginTop={2}
+            padding={3}
+            borderRadius={5}
+          >
+            <img
+              src={submitImg}
+              alt="/"
+              loading="lazy"
+              style={{
+                maxWidth: "70%",
+                height: "auto",
+                padding: 0,
+                margin: 0,
+              }}
+            />
+          </Box>
+        </DialogContent>
+        <Box>
+          <DialogActions>
+            <Button onClick={handleClose}>Close</Button>
+            <Button>Download pdf</Button>
+          </DialogActions>
+          <DialogActions
+            sx={{ display: "flex", justifyContent: "flex-start" }}
+          ></DialogActions>
+        </Box>
+      </Dialog>
+    </div>
   );
 };
 
