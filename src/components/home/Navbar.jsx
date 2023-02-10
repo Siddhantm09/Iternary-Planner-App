@@ -2,7 +2,7 @@ import * as React from "react";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Container,
   Menu,
@@ -34,7 +34,14 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const settings = ["Profile", "Account", "Contact Us", "Logout"];
+  const settings = [
+    "SignIn",
+    "Login",
+    "Profile",
+    "Account",
+    "Contact Us",
+    "Logout",
+  ];
 
   return (
     <AppBar
@@ -49,6 +56,7 @@ function Navbar() {
           <ConnectingAirportsIcon
             sx={{ display: { xs: "none", md: "flex" } }}
           />
+
           <Typography
             variant="h6"
             noWrap
@@ -101,29 +109,29 @@ function Navbar() {
               }}
             >
               <NavLink to="/youplan" style={{ textDecoration: "none" }}>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Typography textAlign="center">Plan Yourself</Typography>
                 </MenuItem>
               </NavLink>
 
               <NavLink to="/weplan" style={{ textDecoration: "none" }}>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Typography textAlign="center">We Plan</Typography>
                 </MenuItem>
               </NavLink>
 
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem>
                 <Typography textAlign="center">Subscribe</Typography>
               </MenuItem>
 
               <NavLink to="/news" style={{ textDecoration: "none" }}>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Typography textAlign="center">News</Typography>
                 </MenuItem>
               </NavLink>
 
               <NavLink to="/about" style={{ textDecoration: "none" }}>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Typography textAlign="center">About</Typography>
                 </MenuItem>
               </NavLink>
@@ -132,13 +140,14 @@ function Navbar() {
           <ConnectingAirportsIcon
             sx={{ display: { xs: "flex", md: "none" } }}
           />
+
           <Typography
             variant="h5"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 7,
+              mr: 4,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
@@ -155,53 +164,44 @@ function Navbar() {
           {/* For Large Screen */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <NavLink to="/youplan" style={{ textDecoration: "none" }}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                Plan Yourself
-              </Button>
-            </NavLink>
-            <NavLink to="/weplan" style={{ textDecoration: "none" }}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                We Plan
-              </Button>
-            </NavLink>
-
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "flex" },
+              }}
             >
-              Subscribe
-            </Button>
-            <NavLink to="/news" style={{ textDecoration: "none" }}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                News
-              </Button>
-            </NavLink>
-            <NavLink to="/about" style={{ textDecoration: "none" }}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                About
-              </Button>
-            </NavLink>
+              <NavLink to="/youplan" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>Plan Yourself</Button>
+              </NavLink>
+              <NavLink to="/weplan" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>We Plan</Button>
+              </NavLink>
+
+              <Button sx={{ my: 2, color: "white" }}>Subscribe</Button>
+              <NavLink to="/news" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>News</Button>
+              </NavLink>
+              <NavLink to="/about" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>About</Button>
+              </NavLink>
+            </Box>
+
+            <Box sx={{ flexGrow: 0, marginRight: 2 }}>
+              <NavLink to="/signup" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>Sign in</Button>
+              </NavLink>
+              <NavLink to="/login" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>Log in</Button>
+              </NavLink>
+            </Box>
           </Box>
 
           {/* ======================================================================================================== */}
           {/* Settings Menu */}
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
                 <AccountCircleSharpIcon fontSize="large" />
               </IconButton>
             </Tooltip>

@@ -7,6 +7,11 @@ import hotel1 from "../assets/otherImages/goaImages/oceangoa.webp";
 import hotel2 from "../assets/otherImages/goaImages/horizon.avif";
 import hotel3 from "../assets/otherImages/goaImages/319812250.jpg";
 import hotel4 from "../assets/otherImages/goaImages/amigos.jpeg";
+import cafe1 from "../assets/otherImages/goaImages/chocolatti.avif";
+import cafe2 from "../assets/otherImages/goaImages/babaau.jpg";
+import cafe3 from "../assets/otherImages/goaImages/The Rice Mill.jpg";
+import cafe4 from "../assets/otherImages/goaImages/LilaCafe,Anjuna.avif";
+import cafe5 from "../assets/otherImages/goaImages/Sakana, Vagator.avif";
 
 export const GoaImages = [goa1, goa2, goa3, goa4];
 
@@ -85,66 +90,83 @@ export const HotelsData = [
 ];
 
 export const placesToVisit = [
-  { id: 0, name: "Palolem Beach", location: "", famousFor: "" },
-  { id: 1, name: "Baga Beach", location: "", famousFor: "" },
-  { id: 2, name: "Calangute Beach", location: "", famousFor: "" },
-  { id: 3, name: "Vagator", location: "", famousFor: "" },
-  { id: 4, name: "Arambol Beach", location: "", famousFor: "" },
+  { id: 0, image: "", name: "Palolem Beach", location: "", famousFor: "" },
+  { id: 1, image: "", name: "Baga Beach", location: "", famousFor: "" },
+  { id: 2, image: "", name: "Calangute Beach", location: "", famousFor: "" },
+  { id: 3, image: "", name: "Vagator", location: "", famousFor: "" },
+  { id: 4, image: "", name: "Arambol Beach", location: "", famousFor: "" },
 ];
 
 export const cafesToVisit = [
   {
     id: 0,
-    img: "",
+    img: cafe1,
     name: "Cafe Chocolatti",
     location: "409A, Fort Aguada Road, Candolim, Goa",
     Timings: "Monday to Sunday –> 9 am to 7 pm",
     famousFor: "",
-    AverageMealForTwo: "Starts from INR 1,000 (tax excluded)",
+    AverageMealForTwo:
+      "Average meal for two -Starts from INR 1,000 (tax excluded)",
     ZomatoRatings: 4.1 / 5,
+    zomatoLink: "https://www.zomato.com/goa/cafe-chocolatti-candolim",
+    swiggyLink:
+      "https://www.swiggy.com/restaurants/cafe-chocolatti-baga-calangute-central-goa-510452",
   },
   {
     id: 1,
-    img: "",
+    img: cafe2,
     name: "Baba Au Rhum",
     location: "House No. 1054, Sim Vaddo, Anjuna, Bardez, Goa",
     famousFor: "",
     Cuisine: "Italian, and French",
     Timings: "Wednesday to Monday –> 9 am to 11 pm",
-    AverageMealForTwo: "Starts from INR 1,000 (tax excluded)",
+    AverageMealForTwo:
+      "Average meal for two -Starts from INR 1,000 (tax excluded)",
     ZomatoRatings: " 4.6 / 5",
+    zomatoLink: "https://www.zomato.com/goa/baba-au-rhum-1-anjuna",
+    swiggyLink:
+      "https://www.swiggy.com/restaurants/baba-au-rhum-baga-calangute-central-goa-279921",
   },
   {
     id: 2,
-    img: "",
+    img: cafe3,
     name: "The Rice Mill",
     location: "H. No. 384, Near Bank of Baroda, Varchawad,Morjim, Pernem, Goa",
     Timings: "Monday to Sunday –> 9.30 am to 11 pm",
-    AverageMealForTwo: "Starts from INR 1,000 (tax excluded)",
+    AverageMealForTwo:
+      "Average meal for two -Starts from INR 1,000 (tax excluded)",
     famousFor: "",
     Cuisine: "Continental, and Goan",
-    ZomatoRatings: 3.3 / 5,
+    ZomatoRatings: "3.3 / 5",
+    zomatoLink: "https://www.zomato.com/goa/the-rice-mill-morjim",
+    swiggyLink: "",
   },
   {
     id: 3,
-    img: "",
+    img: cafe4,
     name: "Lila Cafe, Anjuna",
     location: "Tito’s White House, Calangute-Arpora-Siolim Road, Anjuna, Goa",
     Cuisine: "German, European, and Continental",
     Timings: "Monday to Sunday – 8.30 am to 6 pm",
-    AverageMealForTwo: "Starts from INR 600 (tax excluded)",
+    AverageMealForTwo:
+      "Average meal for two -Starts from INR 600 (tax excluded)",
     ZomatoRatings: "4.1/5",
     famousFor: "",
+    swiggyLink: "",
+    zomatoLink: "",
   },
   {
     id: 4,
-    img: "",
+    img: cafe5,
     name: "Sakana, Vagator",
     location: "Chapora Main St, Vagator, Goa",
     famousFor: "",
     Timings: "Monday to Sunday –> 12 Noon until midnight",
     Cuisine: "Japanese",
-    AverageMealForTwo: "Starts from INR 1,200 (tax excluded)",
+    AverageMealForTwo:
+      "Average meal for two -Starts from INR 1,200 (tax excluded)",
     ZomatoRatings: "3.9/5 ",
+    zomatoLink: "",
+    swiggyLink: "",
   },
 ];

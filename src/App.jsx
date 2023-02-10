@@ -19,6 +19,8 @@ import Maldives from "./components/travelInfo/Maldives";
 import RanthamboreNationalPark from "./components/travelInfo/RanthamboreNationalPark";
 import Kalpa from "./components/travelInfo/Kalpa";
 import Kanyakumari from "./components/travelInfo/Kanyakumari";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
 
 const theme = createTheme({
   palette: {
@@ -58,6 +60,8 @@ function App() {
           }
         ></Route>
         <>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
           <Route path="/youplan" element={<YouPlan />}></Route>
           <Route path="/weplan" element={<WePlan />}></Route>
           <Route path="/news" element={<News />}></Route>
