@@ -1,0 +1,2 @@
+background-size: cover;
+=>Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges

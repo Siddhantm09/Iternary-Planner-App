@@ -120,7 +120,6 @@ export default function Main() {
         <Typography
           sx={{
             color: "secondary.main",
-            fontFamily: "cursive",
             fontSize: "30px",
           }}
           variant="h6"

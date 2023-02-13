@@ -30,9 +30,9 @@ const SubscribeUs = () => {
       <Container maxWidth="lg" sx={{ my: 5 }}>
         <Typography
           //textAlign="center"
+          variant="h6"
           sx={{
             color: "secondary.main",
-            fontFamily: "cursive",
             fontSize: "30px",
           }}
         >

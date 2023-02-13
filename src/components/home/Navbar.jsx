@@ -3,6 +3,7 @@ import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import ConnectingAirportsIcon from "@mui/icons-material/ConnectingAirports";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   Container,
   Menu,
@@ -42,6 +43,8 @@ function Navbar() {
     "Contact Us",
     "Logout",
   ];
+  const { pathname } = useLocation();
+  if (pathname === "/login" || pathname === "/signup") return null;
 
   return (
     <AppBar
@@ -186,7 +189,10 @@ function Navbar() {
               </NavLink>
             </Box>
 
-            <Box sx={{ flexGrow: 0, marginRight: 2 }}>
+            <Box sx={{ flexGrow: 0, marginRight: 2, alignItems: "center" }}>
+              <NavLink to="/signup" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>Contact Us</Button>
+              </NavLink>
               <NavLink to="/signup" style={{ textDecoration: "none" }}>
                 <Button sx={{ my: 2, color: "white" }}>Sign in</Button>
               </NavLink>

@@ -1,5 +1,5 @@
 import HeroSection from "./components/home/HeroSection";
-import Main from "./components/home/Main";
+import Main from "./components/home/MostVisited";
 import Navbar from "./components/home/Navbar";
 import { Routes, Route } from "react-router-dom";
 import YouPlan from "./components/planning/YouPlan";
@@ -33,7 +33,7 @@ const theme = createTheme({
       "-apple-system",
       "BlinkMacSystemFont",
       "Segoe UI",
-      "Roboto",
+      "Roboto", //default
       '"Helvetica Neue"',
       "cursive",
       "sans-serif",
@@ -49,6 +49,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+      </Routes>
+      <Routes>
         <Route
           path="/"
           element={
@@ -60,8 +64,6 @@ function App() {
           }
         ></Route>
         <>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/signup" element={<Signup />}></Route>
           <Route path="/youplan" element={<YouPlan />}></Route>
           <Route path="/weplan" element={<WePlan />}></Route>
           <Route path="/news" element={<News />}></Route>
@@ -83,6 +85,7 @@ function App() {
           <Route path="/tips/uttarakhand" element={<Uttarakhand />}></Route>
         </>
       </Routes>
+
       <Footer />
     </ThemeProvider>
   );
