@@ -4,7 +4,7 @@ import "../../css/heroSection.css";
 
 const HeroSection = () => {
   return (
-    <div className="container1">
+    <div className="container21">
       <div className="video">
         <video src={video} muted autoPlay loop type="video/mp4" />
       </div>

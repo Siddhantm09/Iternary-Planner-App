@@ -1,4 +1,4 @@
-import HeroSection from "./components/home/HeroSection";
+import HeroSection from "./components/home/playVideo";
 import Main from "./components/home/MostVisited";
 import Navbar from "./components/home/Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -40,6 +40,8 @@ const theme = createTheme({
       "Apple Color Emoji",
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
+      '"Poppins"',
+      '"sans-serif"',
     ].join(","),
   },
 });

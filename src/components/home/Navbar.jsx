@@ -191,9 +191,6 @@ function Navbar() {
 
             <Box sx={{ flexGrow: 0, marginRight: 2, alignItems: "center" }}>
               <NavLink to="/signup" style={{ textDecoration: "none" }}>
-                <Button sx={{ my: 2, color: "white" }}>Contact Us</Button>
-              </NavLink>
-              <NavLink to="/signup" style={{ textDecoration: "none" }}>
                 <Button sx={{ my: 2, color: "white" }}>Sign in</Button>
               </NavLink>
               <NavLink to="/login" style={{ textDecoration: "none" }}>
