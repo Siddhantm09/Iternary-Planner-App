@@ -49,7 +49,7 @@ const WePlanMain = ({ val }) => {
                 key={c}
                 sx={{ mt: "20px", mb: "20px" }}
               >
-                Enter Trip {index + 1} <Link to="/about">Details</Link>
+                Enter Trip {index + 1} Details
               </Typography>
               <Box
                 textAlign="center"

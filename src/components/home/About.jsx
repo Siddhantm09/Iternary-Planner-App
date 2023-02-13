@@ -16,7 +16,7 @@ const About = () => {
           }}
           textAlign={"center"}
         >
-          <Link to="/weplan">About Us </Link>
+          About Us
         </Typography>
         <Grid>
           <Grid item textAlign={"center"} sx={{ mb: 7, mt: 1 }}>
