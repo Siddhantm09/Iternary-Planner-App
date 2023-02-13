@@ -19,6 +19,7 @@ import {
 } from "@mui/x-date-pickers";
 import submitImg from "../../assets/otherImages/submit.svg";
 import { Container } from "@mui/system";
+import { Link, NavLink } from "react-router-dom";
 
 const WePlanMain = ({ val }) => {
   const mainValue = val - 1;
@@ -48,7 +49,7 @@ const WePlanMain = ({ val }) => {
                 key={c}
                 sx={{ mt: "20px", mb: "20px" }}
               >
-                Enter Trip {index + 1} Details
+                Enter Trip {index + 1} <Link to="/about">Details</Link>
               </Typography>
               <Box
                 textAlign="center"
