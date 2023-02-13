@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/signup.css";
-import image from "../assets/otherImages/goaImages/13_Arambol-Beach.jpg";
+import { Link } from "react-router-dom";
+
 const signup = () => {
   return (
     <div class="wrapper">
@@ -50,7 +51,7 @@ const signup = () => {
               </div>
               <div class="signin">
                 <span>
-                  Already have an account? <a href="/login">Login</a>
+                  Already have an account? <Link to="/login">Login</Link>
                 </span>
               </div>
             </div>

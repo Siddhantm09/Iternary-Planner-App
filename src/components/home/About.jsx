@@ -1,5 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import vector from "../../assets/otherImages/undraw_about_me_re_82bv.svg";
 
 const About = () => {
@@ -15,7 +16,7 @@ const About = () => {
           }}
           textAlign={"center"}
         >
-          About Us
+          <Link to="/weplan">About Us </Link>
         </Typography>
         <Grid>
           <Grid item textAlign={"center"} sx={{ mb: 7, mt: 1 }}>

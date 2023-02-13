@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Container } from "@mui/material";
 import "../css/login.css";
-import image from "../assets/otherImages/goaImages/13_Arambol-Beach.jpg";
+import { Link } from "react-router-dom";
 
 const login = () => {
   return (
@@ -42,7 +41,7 @@ const login = () => {
               </div>
               <div class="signin">
                 <span>
-                  Don't have an account? <a href="/signup">Register</a>
+                  Don't have an account? <Link to="/signup">Signin</Link>
                 </span>
               </div>
             </div>
