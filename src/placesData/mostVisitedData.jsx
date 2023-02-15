@@ -28,15 +28,15 @@ export const cards = [
 
     link: "/tips/maldives",
   },
-  // {
-  //   title: "Kalpa",
-  //   country: "India",
-  //   id: 3,
-  //   img: Kalpa,
-  //   about:
-  //     "Kalpa is a small village in the Sutlej river valley, above Reckong Peo in the Kinnaur district of Himachal Pradesh, Northern India, in the Indian Himalaya. The region is inhabited by the Kinnauri people and is known for its apple orchards, as apples are a major cash-crop for the region",
-  //   link: "/tips/kalpa",
-  // },
+  {
+    title: "Kalpa",
+    country: "India",
+    id: 3,
+    img: kalpa,
+    about:
+      "Kalpa is a small village in the Sutlej river valley, above Reckong Peo in the Kinnaur district of Himachal Pradesh, Northern India, in the Indian Himalaya. The region is inhabited by the Kinnauri people and is known for its apple orchards, as apples are a major cash-crop for the region",
+    link: "/tips/kalpa",
+  },
   {
     title: "Kanyakumari",
     country: "India",
