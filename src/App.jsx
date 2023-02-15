@@ -21,6 +21,7 @@ import Kalpa from "./components/travelInfo/Kalpa";
 import Kanyakumari from "./components/travelInfo/Kanyakumari";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import HolyPlace from "./components/home/HolyPlace";
 
 const theme = createTheme({
   palette: {
@@ -61,6 +62,7 @@ function App() {
             <div>
               <HeroSection />
               <Main />
+              <HolyPlace />
               <SubscribeUs />
             </div>
           }

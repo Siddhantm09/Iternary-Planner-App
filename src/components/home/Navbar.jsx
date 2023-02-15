@@ -35,14 +35,7 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const settings = [
-    "SignIn",
-    "Login",
-    "Profile",
-    "Account",
-    "Contact Us",
-    "Logout",
-  ];
+  const settings = ["Signup", "Login", "Contact Us", "Logout"];
   const { pathname } = useLocation();
   if (pathname === "/login" || pathname === "/signup") return null;
 
@@ -224,11 +217,21 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              <NavLink to="/signup" style={{ textDecoration: "none" }}>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Signup</Typography>
                 </MenuItem>
-              ))}
+              </NavLink>
+              <NavLink to="/login" style={{ textDecoration: "none" }}>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Login</Typography>
+                </MenuItem>
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }}>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Contact Us</Typography>
+                </MenuItem>
+              </NavLink>
             </Menu>
           </Box>
           {/* Settings End=========================================================================================== */}

@@ -1,7 +1,9 @@
-import React from "react";
+import { Typography } from "@mui/material";
+import React, { Fragment } from "react";
+import { holyPlacesData } from "../../placesData/holyPlacesData";
+import "../../css/holyPlace.css";
 
 const HolyPlace = () => {
-  return <div>HolyPlace</div>;
+  return <></>;
 };
-
 export default HolyPlace;
