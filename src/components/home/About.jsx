@@ -10,7 +10,7 @@ const About = () => {
         <Typography
           sx={{
             color: "secondary.main",
-            // fontFamily: "cursive",
+            // fontFamily: "Segoe UI Emoji",
             fontSize: "30px",
             mt: 4,
           }}
