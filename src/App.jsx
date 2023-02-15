@@ -36,7 +36,7 @@ const theme = createTheme({
       "Segoe UI",
       "Roboto", //default
       '"Helvetica Neue"',
-      "cursive",
+
       "sans-serif",
       "Apple Color Emoji",
       '"Segoe UI Emoji"',

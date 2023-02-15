@@ -40,10 +40,7 @@ function Navbar() {
   if (pathname === "/login" || pathname === "/signup") return null;
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{ bgcolor: "secondary.main", fontFamily: "cursive" }}
-    >
+    <AppBar position="sticky" sx={{ bgcolor: "secondary.main" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* ======================================================================================================= */}
