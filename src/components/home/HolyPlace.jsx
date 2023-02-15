@@ -18,7 +18,7 @@ import { Container } from "@mui/system";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ShareIcon from "@mui/icons-material/Share";
 import { NavLink } from "react-router-dom";
-import { holyPlacesData } from "../../placesData/holyPlacesData";
+import holyPlacesData from "../../placesData/holyPlacesData";
 const HolyPlace = () => {
   return (
     <>
