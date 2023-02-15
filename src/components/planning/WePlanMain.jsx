@@ -41,7 +41,11 @@ const WePlanMain = ({ val }) => {
       <Container maxWidth="xl">
         {Array.from(Array(mainValue)).map((c, index) => {
           return (
-            <>
+            <div
+              className="detail"
+              style={{ justifyContent: "center" }}
+              key={index}
+            >
               <Typography
                 align="center"
                 variant="h4"
@@ -55,8 +59,8 @@ const WePlanMain = ({ val }) => {
                 textAlign="center"
                 component="form"
                 sx={{
-                  "& .MuiTextField-root": { m: 1, width: "35ch", ml: "1px" },
-                  mx: "20px",
+                  "& .MuiTextField-root": { m: 1, width: "35ch" },
+                  // mx: "20px",
                 }}
               >
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -102,7 +106,7 @@ const WePlanMain = ({ val }) => {
                   variant="filled"
                 />
               </Box>
-            </>
+            </div>
           );
         })}
       </Container>

@@ -317,7 +317,7 @@ const Goa = () => {
         <Typography
           sx={{
             color: "secondary.main",
-            // fontFamily: "cursive",
+            fontFamily: "cursive",
             fontSize: "30px",
           }}
           variant="h6"

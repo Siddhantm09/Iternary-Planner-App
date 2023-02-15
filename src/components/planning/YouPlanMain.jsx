@@ -108,7 +108,7 @@ const YouPlanMain = ({ count }) => {
                 component="form"
                 sx={{
                   "& .MuiTextField-root": { m: 1, width: "35ch", ml: "1px" },
-                  mx: "20px",
+                  // mx: "20px",
                 }}
               >
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
