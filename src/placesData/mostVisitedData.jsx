@@ -1,3 +1,4 @@
+import kalpa from "../assets/otherImages/kalpa.jpg";
 import maldives from "../assets/otherImages/maldives.jpg";
 import newyork from "../assets/otherImages/statueofLiberty.jpg";
 import uttarakhand from "../assets/otherImages/uttarakhand.jpeg";
