@@ -22,6 +22,8 @@ import Kanyakumari from "./components/travelInfo/Kanyakumari";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import HolyPlace from "./components/home/HolyPlace";
+import customplace from "./components/travelInfo/customPlace";
+import CustomPlace from "./components/travelInfo/customPlace";
 
 const theme = createTheme({
   palette: {
@@ -87,6 +89,7 @@ function App() {
           <Route path="/tips/kanyakumari" element={<Kanyakumari />}></Route>
           <Route path="/tips/kerala" element={<Kerala />}></Route>
           <Route path="/tips/uttarakhand" element={<Uttarakhand />}></Route>
+          <Route path="/tips/customplace" element={<CustomPlace />}></Route>
         </>
       </Routes>
 
