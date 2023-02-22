@@ -112,6 +112,11 @@ function Navbar() {
                   <Typography textAlign="center">We Plan</Typography>
                 </MenuItem>
               </NavLink>
+              <NavLink to="/customplace" style={{ textDecoration: "none" }}>
+                <MenuItem>
+                  <Typography textAlign="center">Search Anything</Typography>
+                </MenuItem>
+              </NavLink>
 
               <MenuItem>
                 <Typography textAlign="center">Subscribe</Typography>
@@ -169,11 +174,14 @@ function Navbar() {
               <NavLink to="/weplan" style={{ textDecoration: "none" }}>
                 <Button sx={{ my: 2, color: "white" }}>We Plan</Button>
               </NavLink>
-
-              <Button sx={{ my: 2, color: "white" }}>Subscribe</Button>
-              <NavLink to="/news" style={{ textDecoration: "none" }}>
-                <Button sx={{ my: 2, color: "white" }}>News</Button>
+              <NavLink to="/customplace" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>Search Anything</Button>
               </NavLink>
+
+              {/* <Button sx={{ my: 2, color: "white" }}>Subscribe</Button> */}
+              {/* <NavLink to="/news" style={{ textDecoration: "none" }}>
+                <Button sx={{ my: 2, color: "white" }}>News</Button>
+              </NavLink> */}
               <NavLink to="/about" style={{ textDecoration: "none" }}>
                 <Button sx={{ my: 2, color: "white" }}>About</Button>
               </NavLink>

@@ -89,7 +89,7 @@ function App() {
           <Route path="/tips/kanyakumari" element={<Kanyakumari />}></Route>
           <Route path="/tips/kerala" element={<Kerala />}></Route>
           <Route path="/tips/uttarakhand" element={<Uttarakhand />}></Route>
-          <Route path="/tips/customplace" element={<CustomPlace />}></Route>
+          <Route path="/customplace" element={<CustomPlace />}></Route>
         </>
       </Routes>
 
