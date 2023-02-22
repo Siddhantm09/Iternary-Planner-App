@@ -32,7 +32,7 @@ const About = () => {
             />
           </Grid>
           <Grid item>
-            <Typography>
+            <Typography fontFamily={"sans-serif"}>
               ipsum dolor sit amet, consectetur adipiscing elit. Proin quis dui
               hendrerit, tempus enim vitae, faucibus diam. Duis sit amet
               sagittis lorem. Curabitur feugiat risus urna. Curabitur sit amet

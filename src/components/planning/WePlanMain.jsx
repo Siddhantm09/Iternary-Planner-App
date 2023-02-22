@@ -110,7 +110,7 @@ const WePlanMain = ({ val }) => {
           );
         })}
       </Container>
-      <Box align="center">
+      <Box align="center" fontFamily={"sans-serif"}>
         <Button
           onClick={handleOpen}
           variant="contained"

@@ -217,7 +217,7 @@ const YouPlanMain = ({ count }) => {
           );
         })}
       </Container>
-      <Box align="center">
+      <Box align="center" fontFamily={"sans-serif"}>
         <Button
           onClick={(e) => {
             handleOpen();
