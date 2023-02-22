@@ -149,7 +149,7 @@ const CustomPlace = () => {
             id="filled-select-currency"
             select
             label="Select"
-            helperText="Please select your currency"
+            helperText="Please select type"
             variant="filled"
             onChange={(e) => {
               setValTwo(e.target.value);
@@ -311,7 +311,7 @@ const CustomPlace = () => {
             select
             label="Select"
             defaultValue="EUR"
-            helperText="Please select your currency"
+            helperText="Please select type"
             variant="filled"
           >
             {types.map((option) => (
