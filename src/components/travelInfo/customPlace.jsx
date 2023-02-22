@@ -257,6 +257,7 @@ const CustomPlace = () => {
             <Typography
               variant="h2"
               textAlign="center"
+              fontFamily={"cursive"}
               sx={{
                 marginTop: { xs: 0, lg: 20, sm: 5, md: 12 },
                 fontSize: {
