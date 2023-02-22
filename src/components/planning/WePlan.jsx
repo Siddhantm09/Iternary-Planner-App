@@ -25,6 +25,7 @@ const WePlan = () => {
             <Typography
               variant="h2"
               textAlign="center"
+              fontFamily={"sans-serif"}
               sx={{
                 marginTop: { xs: 0, lg: 20, sm: 5, md: 12 },
                 fontSize: {
