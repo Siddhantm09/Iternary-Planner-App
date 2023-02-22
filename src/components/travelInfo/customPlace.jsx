@@ -164,7 +164,7 @@ const CustomPlace = () => {
           </TextField>
           <TextField
             id="outlined-textarea"
-            label="Search in Radius"
+            label="Search in Radius (meters)"
             // placeholder="Search in Radius"
             multiline
             variant="filled"
@@ -232,11 +232,6 @@ const CustomPlace = () => {
                   {key[0]}
                 </Typography>
               ))} */}
-
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
@@ -323,7 +318,7 @@ const CustomPlace = () => {
           </TextField>
           <TextField
             id="outlined-textarea"
-            label="Search in Radius"
+            label="Search in Radius(meters)"
             // placeholder="Search in Radius"
             multiline
             variant="filled"
