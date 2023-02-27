@@ -10,20 +10,19 @@ import { createTheme } from "@mui/material";
 import Footer from "./components/home/Footer";
 import News from "./components/home/News";
 import About from "./components/home/About";
-import Goa from "./components/travelInfo/Goa";
-import Kerala from "./components/travelInfo/Kerala";
-import NewYork from "./components/travelInfo/NewYork";
-import Panchgani from "./components/travelInfo/Panchgani";
-import Uttarakhand from "./components/travelInfo/Uttarakhand";
-import Maldives from "./components/travelInfo/Maldives";
-import RanthamboreNationalPark from "./components/travelInfo/RanthamboreNationalPark";
-import Kalpa from "./components/travelInfo/Kalpa";
-import Kanyakumari from "./components/travelInfo/Kanyakumari";
+import Goa from "./components/travelInfo/fetchPlaceMain/Goa";
+import Kerala from "./components/travelInfo/fetchPlaceMain/Kerala";
+import NewYork from "./components/travelInfo/fetchPlaceMain/NewYork";
+import Panchgani from "./components/travelInfo/fetchPlaceMain/Panchgani";
+import Uttarakhand from "./components/travelInfo/fetchPlaceMain/Uttarakhand";
+import Maldives from "./components/travelInfo/fetchPlaceMain/Maldives";
+import RanthamboreNationalPark from "./components/travelInfo/fetchPlaceMain/RanthamboreNationalPark";
+import Kalpa from "./components/travelInfo/fetchPlaceMain/Kalpa";
+import Kanyakumari from "./components/travelInfo/fetchPlaceMain/Kanyakumari";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import HolyPlace from "./components/home/HolyPlace";
-import customplace from "./components/travelInfo/customPlace";
-import CustomPlace from "./components/travelInfo/customPlace";
+import CustomPlace from "./components/travelInfo/fetchPlaceMain/customPlace";
 
 const theme = createTheme({
   palette: {

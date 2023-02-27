@@ -10,19 +10,19 @@ import {
   MenuItem,
   Card,
   Grid,
+  CardActionArea,
+  Backdrop,
+  CircularProgress,
 } from "@mui/material";
-import { types } from "../../UniversalData/UniversalData";
+import { types } from "../../../UniversalData/UniversalData";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import { CardActionArea } from "@mui/material";
 import Typewriter from "typewriter-effect";
-import image from "../../assets/otherImages/search.svg";
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
+import image from "../../../assets/otherImages/search.svg";
 
 const CustomPlace = () => {
   const [val, setVal] = useState("");
   const [valtwo, setValTwo] = useState("");
-  const [radius, setRadius] = useState("");
+
   const [result, setResult] = useState(false);
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
@@ -53,7 +53,7 @@ const CustomPlace = () => {
             location: `${latitude},${longitude}`,
 
             type: valtwo,
-            radius: radius,
+            radius: "10000",
             language: "en",
           },
           headers: {
@@ -160,7 +160,7 @@ const CustomPlace = () => {
             </MenuItem>
           ))}
         </TextField>
-        <TextField
+        {/* <TextField
           id="outlined-textarea"
           label="Search in Radius (meters)"
           multiline
@@ -168,7 +168,7 @@ const CustomPlace = () => {
           onChange={(e) => {
             setRadius(e.target.value);
           }}
-        />
+        /> */}
         <Box>
           <Button
             variant="outlined"

@@ -1,17 +1,18 @@
 import React from "react";
+import axios from "axios";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { cafesToVisit, HotelsData } from "../../placesData/goaData";
-import { GoaImages } from "../../placesData/goaData";
+import { cafesToVisit, HotelsData } from "../../../placesData/goaData";
+import { GoaImages } from "../../../placesData/goaData";
 import { Box, Container, Grid, Link } from "@mui/material";
-import zomatoLogo from "../../assets/icons/Zomato-Logo-PNG-HD-Transparent.png";
-import swiggyLogo from "../../assets/icons/Swiggy-Logo-PNG.png";
-import mmtLogo from "../../assets/icons/Make-My-Trip-Logo-PNG.png";
-import bdcLogo from "../../assets/icons/589a4c2b5aa6293a4aac48c9.png";
+import zomatoLogo from "../../../assets/icons/Zomato-Logo.png";
+import swiggyLogo from "../../../assets/icons/Swiggy-Logo.png";
+import mmtLogo from "../../../assets/icons/Make-My-Trip-Logo.png";
+import bdcLogo from "../../../assets/icons/booking.png";
 
 const Goa = () => {
   return (
