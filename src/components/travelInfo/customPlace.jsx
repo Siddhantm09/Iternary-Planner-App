@@ -5,14 +5,8 @@ import {
   Typography,
   Button,
   Box,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
   Container,
   CardContent,
-  CardMedia,
   MenuItem,
   Card,
   Grid,
@@ -20,18 +14,18 @@ import {
 import { types } from "../../UniversalData/UniversalData";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import { CardActionArea } from "@mui/material";
-import { ForkLeft } from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 import image from "../../assets/otherImages/search.svg";
-import { textAlign } from "@mui/system";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const CustomPlace = () => {
   const [val, setVal] = useState("");
   const [valtwo, setValTwo] = useState("");
   const [radius, setRadius] = useState("");
-  const [result, setResult] = useState([]);
-  // const [latitude, setLatitude] = useState("");
-  // const [longitude, setLongitude] = useState("");
+  const [result, setResult] = useState(false);
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
 
   const placebytext = {
     method: "GET",
@@ -44,16 +38,13 @@ const CustomPlace = () => {
   };
 
   const handleSubmit = () => {
+    setLoading(true);
     axios
       .request(placebytext)
       .then(function (response) {
-        console.log(response.data);
-
         const latitude = response.data.results[0].location.lat;
 
         const longitude = response.data.results[0].location.lng;
-
-        console.log(latitude, longitude);
 
         const searchbyLatLong = {
           method: "GET",
@@ -76,126 +67,141 @@ const CustomPlace = () => {
           .request(searchbyLatLong)
           .then(function (response) {
             console.log(response.data.results);
+            setLoading(false);
             setResult(response.data.results);
           })
           .catch(function (error) {
-            console.error(error.response.data.message);
+            console.error(error);
+            setError(error.response.status);
           });
       })
       .catch(function (error) {
         console.error(error);
+        setError(error.response.status);
       });
   };
-  if (result) {
-    return (
-      <Container maxWidth="xl" sx={{ my: 10 }}>
-        <Grid
-          container
-          spacing={7}
-          sx={{ marginBottom: { xs: 2, lg: 10, md: 5, sm: 8 } }}
-        >
-          <Grid item lg={6} sm={6} xs={12}>
-            <Typography
-              variant="h2"
-              textAlign="center"
-              sx={{
-                marginTop: { xs: 0, lg: 20, sm: 5, md: 12 },
-                fontSize: {
-                  lg: 65,
-                  sm: 54,
-                  xs: 34,
-                },
-                marginLeft: { lg: 5, xs: 0, sm: 2 },
-              }}
-            >
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString("Search Anything !").start();
-                }}
-              />
-            </Typography>
-          </Grid>
-          <Grid item lg={6} sm={6} xs={12}>
-            <img
-              src={image}
-              alt="/"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                padding: 0,
-                margin: 0,
+
+  if (error === 429) {
+    return <h1>Sorry! Cannot fetch results now</h1>;
+  }
+
+  return (
+    <Container maxWidth="xl" sx={{ my: 10 }}>
+      <Grid
+        container
+        spacing={7}
+        sx={{ marginBottom: { xs: 2, lg: 10, md: 5, sm: 8 } }}
+      >
+        <Grid item lg={6} sm={6} xs={12}>
+          <Typography
+            variant="h2"
+            textAlign="center"
+            sx={{
+              marginTop: { xs: 0, lg: 20, sm: 5, md: 12 },
+              fontSize: {
+                lg: 65,
+                sm: 54,
+                xs: 34,
+              },
+              marginLeft: { lg: 5, xs: 0, sm: 2 },
+            }}
+          >
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Search Anything !").start();
               }}
             />
-          </Grid>
+          </Typography>
         </Grid>
-        <Box
-          textAlign={"center"}
-          component="form"
-          sx={{
-            "& .MuiTextField-root": { m: 1, width: "35ch" },
-          }}
-        >
-          <TextField
-            id="outlined-textarea"
-            label="Search your place"
-            placeholder="Enter Your Location"
-            multiline
-            variant="filled"
-            onChange={(e) => {
-              setVal(e.target.value);
+        <Grid item lg={6} sm={6} xs={12}>
+          <img
+            src={image}
+            alt="/"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              padding: 0,
+              margin: 0,
             }}
           />
-          <TextField
-            id="filled-select-currency"
-            select
-            label="Select"
-            helperText="Please select type"
-            variant="filled"
-            onChange={(e) => {
-              setValTwo(e.target.value);
-            }}
-            sx={{ textAlign: "left" }}
+        </Grid>
+      </Grid>
+      <Box
+        textAlign={"center"}
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "35ch" },
+        }}
+      >
+        <TextField
+          id="outlined-textarea"
+          label="Search your place"
+          placeholder="Enter Your Location"
+          multiline
+          variant="filled"
+          onChange={(e) => {
+            setVal(e.target.value);
+          }}
+        />
+        <TextField
+          id="filled-select-currency"
+          select
+          label="Select"
+          helperText="Please select type"
+          variant="filled"
+          onChange={(e) => {
+            setValTwo(e.target.value);
+          }}
+          sx={{ textAlign: "left" }}
+        >
+          {types.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          id="outlined-textarea"
+          label="Search in Radius (meters)"
+          multiline
+          variant="filled"
+          onChange={(e) => {
+            setRadius(e.target.value);
+          }}
+        />
+        <Box>
+          <Button
+            variant="outlined"
+            sx={{ mt: "19px", mx: "19px" }}
+            onClick={handleSubmit}
           >
-            {types.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-          <TextField
-            id="outlined-textarea"
-            label="Search in Radius (meters)"
-            // placeholder="Search in Radius"
-            multiline
-            variant="filled"
-            onChange={(e) => {
-              setRadius(e.target.value);
-            }}
-          />
-          <Box>
-            <Button
-              variant="outlined"
-              sx={{ mt: "19px", mx: "19px" }}
-              onClick={handleSubmit}
-            >
-              Search
-            </Button>
-          </Box>
+            Search
+          </Button>
         </Box>
-        <Typography
-          sx={{
-            color: "secondary.main",
-            fontFamily: "",
-            fontSize: "30px",
-          }}
-          variant="h6"
-          mt="60px"
-          mb="15px"
+      </Box>
+      <Typography
+        sx={{
+          color: "secondary.main",
+          fontFamily: "",
+          fontSize: "30px",
+        }}
+        variant="h6"
+        mt="60px"
+        mb="15px"
+      >
+        Your Search Results will appear below!
+      </Typography>
+      {loading && (
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open
         >
-          Your Search Results will appear below!
-        </Typography>
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      )}
 
-        {result.map((value) => (
+      {result &&
+        result.map((value) => (
           <Card
             sx={{
               mx: "20px",
@@ -205,12 +211,6 @@ const CustomPlace = () => {
             key={value.id}
           >
             <CardActionArea>
-              {/* <CardMedia
-              component="img"
-              height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
-            /> */}
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {value.name}
@@ -227,133 +227,11 @@ const CustomPlace = () => {
                 <Typography gutterBottom variant="h7" component="div">
                   Distance in meters: {value.distance}
                 </Typography>
-                {/* {value.types.map((key, idx) => (
-                <Typography gutterBottom variant="h7" component="div" key={idx}>
-                  {key[0]}
-                </Typography>
-              ))} */}
               </CardContent>
             </CardActionArea>
           </Card>
         ))}
-      </Container>
-    );
-  }
-
-  return (
-    <div>
-      <Container maxWidth="xl" sx={{ my: 10 }}>
-        <Grid
-          container
-          spacing={7}
-          sx={{ marginBottom: { xs: 2, lg: 10, md: 5, sm: 8 } }}
-        >
-          <Grid item lg={6} sm={6} xs={12}>
-            <Typography
-              variant="h2"
-              textAlign="center"
-              fontFamily={"cursive"}
-              sx={{
-                marginTop: { xs: 0, lg: 20, sm: 5, md: 12 },
-                fontSize: {
-                  lg: 65,
-                  sm: 54,
-                  xs: 34,
-                },
-                marginLeft: { lg: 5, xs: 0, sm: 2 },
-              }}
-            >
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString("Search Anything !").start();
-                }}
-              />
-            </Typography>
-          </Grid>
-          <Grid item lg={6} sm={6} xs={12}>
-            <img
-              src={image}
-              alt="/"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                padding: 0,
-                margin: 0,
-              }}
-            />
-          </Grid>
-        </Grid>
-        <Box
-          textAlign={"center"}
-          component="form"
-          sx={{
-            "& .MuiTextField-root": { m: 1, width: "35ch" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            id="outlined-textarea"
-            label="Search your place"
-            placeholder="Enter Your Location"
-            multiline
-            variant="filled"
-            onChange={(e) => {
-              setVal(e.target.value);
-            }}
-          />
-          <TextField
-            id="filled-select-currency"
-            select
-            label="Select"
-            defaultValue="EUR"
-            helperText="Please select type"
-            variant="filled"
-          >
-            {types.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-          <TextField
-            id="outlined-textarea"
-            label="Search in Radius(meters)"
-            // placeholder="Search in Radius"
-            multiline
-            variant="filled"
-            onChange={(e) => {
-              setRadius(e.target.value);
-            }}
-          />
-          <Box>
-            <Button
-              variant="outlined"
-              sx={{ mt: "19px", mx: "19px" }}
-              onClick={handleSubmit}
-            >
-              Search
-            </Button>
-          </Box>
-        </Box>
-        <Typography
-          variant="h4"
-          textAlign="center"
-          sx={{
-            marginTop: { xs: 10, lg: 20, sm: 15, md: 10 },
-            fontSize: {
-              lg: 50,
-              sm: 54,
-              xs: 34,
-            },
-            marginLeft: { lg: 5, xs: 0, sm: 2 },
-          }}
-        >
-          No Result found, check the data entered or try something else
-          <SentimentVeryDissatisfiedIcon sx={{ fontSize: 100 }} />
-        </Typography>
-      </Container>
-    </div>
+    </Container>
   );
 };
 
