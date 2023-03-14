@@ -127,7 +127,7 @@ const Kalpa = () => {
         >
           <TextField
             id="outlined-textarea"
-            label="Search your place"
+            label="Search any place in kalpa"
             placeholder="Enter Your Location"
             multiline
             variant="filled"

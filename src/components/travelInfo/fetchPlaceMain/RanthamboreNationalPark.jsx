@@ -134,7 +134,7 @@ const RanthamboreNationalPark = () => {
         >
           <TextField
             id="outlined-textarea"
-            label="Search your place"
+            label="Search any place in ranthambore"
             placeholder="Enter Your Location"
             multiline
             variant="filled"

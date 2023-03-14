@@ -129,7 +129,7 @@ const NewYork = () => {
         >
           <TextField
             id="outlined-textarea"
-            label="Search your place"
+            label="Search any place in new york"
             placeholder="Enter Your Location"
             multiline
             variant="filled"

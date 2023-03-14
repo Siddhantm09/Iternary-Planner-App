@@ -133,7 +133,7 @@ const Panchgani = () => {
         >
           <TextField
             id="outlined-textarea"
-            label="Search your place"
+            label="Search any place in panchgani"
             placeholder="Enter Your Location"
             multiline
             variant="filled"
